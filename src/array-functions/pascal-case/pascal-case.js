@@ -11,27 +11,10 @@ Don't mutate the parameter.
 
 */
 
-// TODO add your code here
+function pascalCase(string){
+  let toUpper = string.toLowerCase().split(' ').map(word => word[0].toUpperCase() + word.slice(1, word.length));
+  return toUpper.join('');
+}
 
-// Begin of tests
-const assert = require("assert");
 
-assert.strictEqual(typeof pascalCase, "function");
-assert.strictEqual(pascalCase.length, 1);
-assert.strictEqual(
-  pascalCase.toString().includes("for "),
-  false,
-  "don't use a loop"
-);
-assert.strictEqual(
-  pascalCase.toString().includes("while "),
-  false,
-  "don't use a loop"
-);
-assert.strictEqual(pascalCase("this is sparta"), "ThisIsSparta");
-assert.strictEqual(pascalCase("sO rAdicAL DuDe"), "SoRadicalDude");
-let test = "no mutation";
-pascalCase(test);
-assert.strictEqual(test, "no mutation", "don't mutate the parameter");
-
-// End of tests
+pascalCase("sO rAdicAL DuDe")

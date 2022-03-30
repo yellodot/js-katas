@@ -1,7 +1,7 @@
 {
   "name": "js-katas",
   "scripts": {
-    "test": "jest"
+    "test": "jest test"
   },
   "devDependencies": {
     "jest": "^27.5.1"
