@@ -22,7 +22,6 @@ function inverse(array){
           return Math.sign(num) === 1 ? parseInt(negative.concat(num.toString())) : parseInt(num.toString().split('').pop());
         }
         )
-    		console.log("result",result);
     return result;
       }
     else return [];
