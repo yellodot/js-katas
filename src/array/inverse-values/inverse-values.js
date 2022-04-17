@@ -14,6 +14,18 @@ Don't mutate the parameter.
 
 */
 
-// TODO add your code here
+function inverse(array){
+    if ((array !== null) && (array.length>0)) {
+        let negative = "-";
+        const result = array.map((num) => 
+          {           
+          return Math.sign(num) === 1 ? parseInt(negative.concat(num.toString())) : parseInt(num.toString().split('').pop());
+        }
+        )
+    		console.log("result",result);
+    return result;
+      }
+    else return [];
+}
 
 module.exports = inverse;
