@@ -9,6 +9,14 @@ Example:
 
 */
 
-// TODO add your code here
+function sum(array){
+    if ((array !== null) && (array.length>0)) {
+      let result = array.reduce((prev, current) =>
+				current % 2 === 0 ? prev + 0 : prev + current
+        , 0)
+      return result;
+    }
+  	else return 0;
+}
 
 module.exports = sum;
