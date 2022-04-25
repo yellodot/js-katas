@@ -13,5 +13,14 @@ You can't use the function Math.min()
 */
 
 // TODO add your code here
+function min(array) {
+    if(array === null || array.length === 0) {
+        return null;
+    } else {
+        return array.reduce((prev,current) => {
+            return current < prev ? current : prev;
+        })
+    }
+}
 
 module.exports = min;
