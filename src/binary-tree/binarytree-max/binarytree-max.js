@@ -30,7 +30,15 @@ class TreeNode {
 }
 
 const max = (node) => {
-  // TODO add your code here
+  if (!node) return null;
+  let maxValue = node.value;
+  let left = max(node.left);
+  let right = max(node.right);
+  if (left > maxValue)
+    maxValue = left;
+  if (right > maxValue)
+    maxValue = right;
+  return maxValue;
 };
 
 // Begin of tests

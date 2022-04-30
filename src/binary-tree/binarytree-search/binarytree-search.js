@@ -31,7 +31,16 @@ class TreeNode {
 }
 
 const search = (node, value) => {
-  // TODO add your code here
+  if (!node) return null;    
+  if(node.value === value) {
+    return node;
+  } else {
+  if(node.value > value) {
+      return search(node.left, value);
+  } else {
+      return search(node.right, value);
+    }
+  }
 };
 
 // Begin of tests
