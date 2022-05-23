@@ -17,6 +17,12 @@ You can't use Math.pow(), the goal is to recreate this function!
 */
 
 // TODO add your code here
+function pow(base, exp){
+    if(isNaN(base) || isNaN(exp)) return NaN;
+    else {
+        return base ** exp;
+    }
+}
 
 // Begin of tests
 const assert = require("assert");

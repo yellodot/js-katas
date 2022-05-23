@@ -13,6 +13,12 @@ You can't use Math.min(), the goal is to recreate this function!
 */
 
 // TODO add your code here
+function min(a,b){
+    if (isNaN(a) || isNaN(b)) return NaN;
+    else {
+        return a < b ? a : b;
+    }
+}
 
 // Begin of tests
 const assert = require("assert");

@@ -16,11 +16,11 @@ Don't mutate the parameter.
 
 function inverse(array){
     if ((array !== null) && (array.length>0)) {
-        let negative = "-";
+        const negative = "-";
         const result = array.map((num) => 
           {           
           return Math.sign(num) === 1 ? parseInt(negative.concat(num.toString())) : parseInt(num.toString().split('').pop());
-        }
+          }
         )
     return result;
       }
